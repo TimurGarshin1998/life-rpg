@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Life RPG — MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header" id="appHeader">
+    <div class="header-title">
+      <h1>Life RPG</h1>
+      <p>Прокачка реального персонажа: навыки дают XP, метрики закрывают цели.</p>
+    </div>
+    <div class="header-actions">
+      <button id="cloudLoadBtn" type="button" data-short="☁️↓" aria-label="Загрузить из Gist">Загрузить из Gist</button>
+      <button id="cloudSaveBtn" type="button" data-short="☁️↑" aria-label="Сохранить в Gist">Сохранить в Gist</button>
+      <button id="exportBtn" type="button" data-short="⬇️" aria-label="Экспорт JSON">Экспорт JSON</button>
+      <label class="file-btn" data-short="⬆️" aria-label="Импорт JSON">
+        <span>Импорт JSON</span>
+        <input id="importInput" type="file" accept="application/json" hidden />
+      </label>
+      <button id="resetBtn" class="danger" type="button" data-short="↺" aria-label="Сброс">Сброс</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel hero">
+      <div>
+        <label>Имя персонажа</label>
+        <input id="characterName" placeholder="Tim" />
+      </div>
+      <div class="hero-level">
+        <div class="level-circle">
+          <span id="charLevel">1</span>
+          <small>LEVEL</small>
+        </div>
+        <div class="xp-box">
+          <strong id="charXpText">0 XP</strong>
+          <div class="bar"><div id="charXpBar"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <details class="panel collapsible" open>
+      <summary><span class="panel-icon"><img src="icons/calendar.png" alt="" /></span><span>Календарь</span><small id="calendarSummary">текущий месяц</small></summary>
+      <div class="panel-body">
+        <div class="section-head calendar-head">
+          <p class="hint">Открывается текущий месяц. Стрелками можно смотреть другие месяцы, но запись доступна только на сегодняшнюю системную дату.</p>
+          <div class="calendar-controls" aria-label="Переключение месяцев">
+            <button id="prevMonthBtn" type="button" title="Предыдущий месяц">←</button>
+            <strong id="calendarMonthLabel">Месяц</strong>
+            <button id="nextMonthBtn" type="button" title="Следующий месяц">→</button>
+            <button id="goTodayBtn" type="button" class="secondary">Сегодня</button>
+          </div>
+        </div>
+        <div id="calendarGrid" class="calendar-grid month-slider"></div>
+      </div>
+    </details>
+
+    <details class="panel collapsible" open>
+      <summary><span class="panel-icon"><img src="icons/activity.png" alt="" /></span><span>Добавить запись</span><small>сегодня</small></summary>
+      <div class="panel-body" id="addActivityPanel">
+        <div class="activity-form">
+          <label>
+            Дата
+            <input id="activityDate" type="date" />
+          </label>
+          <label>
+            Запись
+            <select id="entrySelect"></select>
+          </label>
+          <label>
+            Значение
+            <input id="entryValue" type="number" step="0.01" placeholder="например 3.1" />
+          </label>
+          <label>
+            Единица
+            <input id="entryUnit" readonly />
+          </label>
+          <label>
+            Комментарий
+            <input id="entryNote" placeholder="море, волны, тяжело..." />
+          </label>
+          <button id="addEntryBtn" type="button">Добавить</button>
+        </div>
+        <p class="hint" id="formulaHint"></p>
+      </div>
+    </details>
+
+    <section class="grid two">
+      <details class="panel collapsible" open>
+        <summary><span class="panel-icon"><img src="icons/stats.png" alt="" /></span><span>Характеристики</span><small>уровни</small></summary>
+        <div class="panel-body">
+          <div id="statsGrid" class="stats-grid"></div>
+        </div>
+      </details>
+
+      <details class="panel collapsible" open>
+        <summary><span class="panel-icon"><img src="icons/quest.png" alt="" /></span><span>Ежедневные квесты</span><small>автопроверка</small></summary>
+        <div class="panel-body">
+          <p class="hint">Дейлики закрываются автоматически по сумме записей за сегодняшнюю дату.</p>
+          <div id="dailyQuests"></div>
+
+          <div class="custom-quest-box">
+            <h3>Кастомный дейлик</h3>
+            <div class="custom-quest-form">
+              <label>
+                Название
+                <input id="customQuestName" placeholder="Например: 2 км плавания" />
+              </label>
+              <label>
+                Метрика / навык
+                <select id="customQuestMetric"></select>
+              </label>
+              <label>
+                Цель
+                <input id="customQuestTarget" type="number" step="0.01" placeholder="2" />
+              </label>
+              <label>
+                Единица
+                <input id="customQuestUnit" readonly />
+              </label>
+              <label>
+                Бонус XP, %
+                <input id="customQuestBonus" type="number" step="1" min="1" max="25" value="10" />
+              </label>
+              <button id="createCustomQuestBtn" type="button">Создать</button>
+            </div>
+            <p class="hint">Бонус начисляется один раз в день. Рекомендация: 5–10%, максимум 25%.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="grid two">
+      <details class="panel collapsible" open>
+        <summary><span class="panel-icon"><img src="icons/skill.png" alt="" /></span><span>Навыки</span><small>дают XP</small></summary>
+        <div class="panel-body">
+          <div id="skillsList" class="skills-list"></div>
+        </div>
+      </details>
+
+      <details class="panel collapsible">
+        <summary><span class="panel-icon"><img src="icons/metrics.png" alt="" /></span><span>Метрики дня</span><small>без прямого XP</small></summary>
+        <div class="panel-body">
+          <div id="metricsList" class="metrics-list"></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="grid two">
+      <details class="panel collapsible">
+        <summary><span class="panel-icon"><img src="icons/trophy.png" alt="" /></span><span>Достижения</span><small>разовые награды</small></summary>
+        <div class="panel-body">
+          <div id="achievementsList" class="achievements-list"></div>
+        </div>
+      </details>
+
+      <details class="panel collapsible">
+        <summary><span class="panel-icon"><img src="icons/cloud.png" alt="" /></span><span>Облако GitHub Gist</span><small>телефон + ПК</small></summary>
+        <div class="panel-body">
+          <div class="cloud-form">
+            <label>
+              Gist ID
+              <input id="gistIdInput" placeholder="например: a1b2c3d4..." />
+            </label>
+            <label>
+              Имя файла в Gist
+              <input id="gistFileInput" placeholder="life-rpg-save.json" />
+            </label>
+            <label>
+              GitHub token
+              <input id="gistTokenInput" type="password" placeholder="github_pat_..." autocomplete="off" />
+            </label>
+            <label class="checkbox-label">
+              <input id="rememberTokenInput" type="checkbox" />
+              <span>Хранить token в этом браузере</span>
+            </label>
+            <div class="cloud-actions">
+              <button id="cloudCreateBtn" type="button">Создать secret Gist</button>
+              <button id="cloudLoadBtn2" type="button">Загрузить</button>
+              <button id="cloudSaveBtn2" type="button">Сохранить</button>
+            </div>
+          </div>
+          <p class="hint warning">Token хранится в браузере только для личного MVP. Не публикуй его и не вставляй в код проекта.</p>
+          <p id="cloudStatus" class="hint"></p>
+        </div>
+      </details>
+    </section>
+
+    <details class="panel collapsible">
+      <summary><span class="panel-icon"><img src="icons/history.png" alt="" /></span><span>История</span><small>последние 300 записей</small></summary>
+      <div class="panel-body">
+        <div class="history-actions">
+          <button id="clearHistoryBtn" class="danger secondary" type="button">Очистить историю</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </details>
+  </main>
+
+  <footer>
+    <p>Основное хранение — localStorage. Для синхронизации между телефоном и ПК используй GitHub Gist: загрузить перед работой, сохранить после работы.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

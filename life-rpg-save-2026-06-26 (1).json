@@ -1,0 +1,643 @@
+{
+  "version": 3,
+  "character": {
+    "name": "Tim",
+    "xp": 1374.685,
+    "level": 4
+  },
+  "stats": {
+    "health": 1,
+    "strength": 1,
+    "endurance": 1,
+    "mobility": 1,
+    "intellect": 1,
+    "recovery": 1
+  },
+  "statXp": {
+    "health": 252.71874999999997,
+    "strength": 179.88750000000002,
+    "endurance": 303.129,
+    "mobility": 69.75,
+    "intellect": 0,
+    "recovery": 209.69975
+  },
+  "skills": {
+    "swimming": {
+      "xp": 177.78000000000003,
+      "level": 1,
+      "best": 4.5,
+      "total": 14.55
+    },
+    "walking": {
+      "xp": 0,
+      "level": 1,
+      "best": 0,
+      "total": 0
+    },
+    "steps": {
+      "xp": 6.36,
+      "level": 1,
+      "best": 3180,
+      "total": 3180
+    },
+    "activeCalories": {
+      "xp": 40.92,
+      "level": 1,
+      "best": 1023,
+      "total": 1023
+    },
+    "pushups": {
+      "xp": 52.5,
+      "level": 1,
+      "best": 50,
+      "total": 200
+    },
+    "pullups": {
+      "xp": 40,
+      "level": 1,
+      "best": 20,
+      "total": 20
+    },
+    "bench": {
+      "xp": 0,
+      "level": 1,
+      "best": 0,
+      "total": 0
+    },
+    "mobility": {
+      "xp": 45,
+      "level": 1,
+      "best": 15,
+      "total": 30
+    },
+    "sleep": {
+      "xp": 92,
+      "level": 1,
+      "best": 9,
+      "total": 24
+    },
+    "protein": {
+      "xp": 62.125,
+      "level": 1,
+      "best": 179,
+      "total": 337
+    }
+  },
+  "achievements": {
+    "swim_1km": {
+      "unlockedAt": "2026-06-23T17:53:15.327Z",
+      "reward": 50
+    },
+    "swim_3km": {
+      "unlockedAt": "2026-06-23T17:53:15.327Z",
+      "reward": 150
+    },
+    "pullups_20": {
+      "unlockedAt": "2026-06-25T18:30:25.099Z",
+      "reward": 250
+    },
+    "protein_160": {
+      "unlockedAt": "2026-06-25T18:33:28.486Z",
+      "reward": 100
+    }
+  },
+  "daily": {
+    "2026-06-23": {
+      "sleep8": true,
+      "active500": true,
+      "protein130": true,
+      "mobility10": true
+    },
+    "2026-06-24": {
+      "sleep8": true
+    },
+    "2026-06-25": {
+      "custom_1782390016336": {
+        "done": true,
+        "reward": 5,
+        "completedAt": "2026-06-25T18:30:15.913Z",
+        "total": 4.5
+      },
+      "mobility10": {
+        "done": true,
+        "reward": 15,
+        "completedAt": "2026-06-25T18:30:34.813Z",
+        "total": 15
+      },
+      "active500": {
+        "done": true,
+        "reward": 25,
+        "completedAt": "2026-06-25T18:31:02.890Z",
+        "total": 1433
+      },
+      "protein130": {
+        "done": true,
+        "reward": 25,
+        "completedAt": "2026-06-25T18:33:28.487Z",
+        "total": 179
+      }
+    },
+    "2026-06-26": {
+      "sleep8": true,
+      "custom_1782462761737_3430": true,
+      "mobility10": true,
+      "custom_1782306928689_8957": true,
+      "protein130": true,
+      "active500": true
+    }
+  },
+  "customDailyQuests": [
+    {
+      "id": "custom_1782306928689_8957",
+      "name": "Тренировка отжимания",
+      "description": "100 повторы · Отжимания",
+      "skillId": "pushups",
+      "target": 100,
+      "unit": "reps",
+      "rewardType": "percent",
+      "bonusPercent": 10,
+      "reward": 0,
+      "stats": {
+        "strength": 0.6,
+        "endurance": 0.25,
+        "health": 0.15
+      },
+      "createdAt": "2026-06-24T13:15:28.689Z"
+    },
+    {
+      "id": "custom_1782462761737_3430",
+      "name": "2 км плавания",
+      "description": "2 км · Плавание",
+      "skillId": "swimming",
+      "target": 2,
+      "unit": "km",
+      "rewardType": "percent",
+      "bonusPercent": 10,
+      "reward": 0,
+      "stats": {
+        "endurance": 0.75,
+        "health": 0.25
+      },
+      "createdAt": "2026-06-26T08:32:41.741Z"
+    }
+  ],
+  "history": [
+    {
+      "id": "c98b88ce-bcbb-462d-b752-33224b18d1b2",
+      "createdAt": "2026-06-26T19:16:56.486Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "steps",
+      "name": "Шаги",
+      "value": 3180,
+      "unit": "steps",
+      "xp": 6.36,
+      "note": ""
+    },
+    {
+      "id": "e0a56536-cc50-4160-b31f-066ff8d80d3a",
+      "createdAt": "2026-06-26T19:15:04.173Z",
+      "date": "2026-06-26",
+      "type": "daily",
+      "questId": "active500",
+      "name": "500 активных ккал",
+      "xp": 25,
+      "note": "Ежедневный квест закрыт автоматически"
+    },
+    {
+      "id": "1adac2f0-e8fc-416a-83e1-68a488ad7e8f",
+      "createdAt": "2026-06-26T19:15:04.160Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "activeCalories",
+      "name": "Активные ккал",
+      "value": 1023,
+      "unit": "kcal",
+      "xp": 40.92,
+      "note": ""
+    },
+    {
+      "id": "e06a70db-dbf6-4daf-b6ea-0586039c6fe4",
+      "createdAt": "2026-06-26T18:34:50.775Z",
+      "date": "2026-06-26",
+      "type": "daily",
+      "questId": "protein130",
+      "name": "130 г белка",
+      "xp": 25,
+      "note": "Ежедневный квест закрыт автоматически"
+    },
+    {
+      "id": "5002e0b1-c431-49a5-b821-860282e7c60e",
+      "createdAt": "2026-06-26T18:34:50.766Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "protein",
+      "name": "Белок",
+      "value": 158,
+      "unit": "g",
+      "xp": 29.75,
+      "note": ""
+    },
+    {
+      "id": "8069ecde-7e5e-497f-83df-82f5110a1c3f",
+      "createdAt": "2026-06-26T18:20:07.080Z",
+      "date": "2026-06-26",
+      "type": "daily",
+      "questId": "custom_1782306928689_8957",
+      "name": "Тренировка отжимания",
+      "xp": 2.5,
+      "note": "Кастомный дейлик: +10% к XP за Отжимания за день"
+    },
+    {
+      "id": "5f0eebc3-ba51-4916-9846-9205624a86ad",
+      "createdAt": "2026-06-26T18:20:07.075Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "pushups",
+      "name": "Отжимания",
+      "value": 50,
+      "unit": "reps",
+      "xp": 12.5,
+      "note": ""
+    },
+    {
+      "id": "bef25485-bbbc-46e7-a364-2a713100acc5",
+      "createdAt": "2026-06-26T18:12:54.313Z",
+      "date": "2026-06-26",
+      "type": "daily",
+      "questId": "mobility10",
+      "name": "10 минут мобильности",
+      "xp": 15,
+      "note": "Ежедневный квест закрыт автоматически"
+    },
+    {
+      "id": "09f202f6-52d1-4247-977e-2d74c5bb2665",
+      "createdAt": "2026-06-26T18:12:54.305Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "mobility",
+      "name": "Мобильность / ТБС",
+      "value": 15,
+      "unit": "minutes",
+      "xp": 22.5,
+      "note": ""
+    },
+    {
+      "id": "559b31bc-24f6-43a9-bdab-9bdccd09c826",
+      "createdAt": "2026-06-26T17:42:06.415Z",
+      "date": "2026-06-26",
+      "type": "daily",
+      "questId": "custom_1782462761737_3430",
+      "name": "2 км плавания",
+      "xp": 3.1799999999999997,
+      "note": "Кастомный дейлик: +10% к XP за Плавание за день"
+    },
+    {
+      "id": "498a3347-db64-489a-af1c-4ace84ba2a48",
+      "createdAt": "2026-06-26T17:42:06.407Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "swimming",
+      "name": "Плавание",
+      "value": 2.65,
+      "unit": "km",
+      "xp": 31.799999999999997,
+      "note": "Море"
+    },
+    {
+      "id": "98567f18-55e8-473a-a4e7-044a20f33209",
+      "createdAt": "2026-06-26T08:35:42.516Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "pushups",
+      "name": "Отжимания",
+      "value": 50,
+      "unit": "reps",
+      "xp": 12.5,
+      "note": ""
+    },
+    {
+      "id": "8aa32a37-4807-4a0c-82a1-fd7397de0dea",
+      "createdAt": "2026-06-26T08:31:20.044Z",
+      "date": "2026-06-26",
+      "type": "daily",
+      "questId": "sleep8",
+      "name": "8 часов сна",
+      "xp": 20,
+      "note": "Ежедневный квест закрыт автоматически"
+    },
+    {
+      "id": "2ff33fcd-6bc0-46fb-8cb5-fe888b1d9ee6",
+      "createdAt": "2026-06-26T08:31:20.039Z",
+      "date": "2026-06-26",
+      "type": "activity",
+      "skillId": "sleep",
+      "name": "Сон",
+      "value": 8,
+      "unit": "hours",
+      "xp": 34,
+      "note": ""
+    },
+    {
+      "id": "b5eaf346-12ff-48de-940e-13f0db341f8b",
+      "createdAt": "2026-06-25T18:33:28.487Z",
+      "date": "2026-06-25",
+      "type": "daily",
+      "name": "130 г белка",
+      "xp": 25,
+      "note": "Автозакрыто: 179 / 130 граммы"
+    },
+    {
+      "id": "04533e28-d4f7-4865-9544-2a0bb871dd66",
+      "createdAt": "2026-06-25T18:33:28.487Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "protein",
+      "name": "Белок",
+      "value": 179,
+      "unit": "g",
+      "xp": 32.375,
+      "baseXp": 32.375,
+      "note": ""
+    },
+    {
+      "id": "f035208b-cb9f-418c-99b5-aca54fec8902",
+      "createdAt": "2026-06-25T18:33:28.486Z",
+      "date": "2026-06-25",
+      "type": "achievement",
+      "name": "Белковая броня",
+      "xp": 100,
+      "note": "Достижение открыто"
+    },
+    {
+      "id": "e77edb68-9e39-4942-a161-5c04c0ede081",
+      "createdAt": "2026-06-25T18:32:20.415Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "activeCalories",
+      "name": "Активные ккал",
+      "value": 1500,
+      "unit": "kcal",
+      "xp": 0,
+      "baseXp": 0,
+      "note": ""
+    },
+    {
+      "id": "8ff358c3-e088-45c8-91ec-f52413d537c1",
+      "createdAt": "2026-06-25T18:31:02.890Z",
+      "date": "2026-06-25",
+      "type": "daily",
+      "name": "500 активных ккал",
+      "xp": 25,
+      "note": "Автозакрыто: 1433 / 500 ккал"
+    },
+    {
+      "id": "71ac7d70-bd3b-4c0e-abd1-89056c61d40a",
+      "createdAt": "2026-06-25T18:31:02.890Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "activeCalories",
+      "name": "Активные ккал",
+      "value": 1433,
+      "unit": "kcal",
+      "xp": 0,
+      "baseXp": 0,
+      "note": ""
+    },
+    {
+      "id": "4b43b5ce-27c3-4ec7-bf84-a274988c03d2",
+      "createdAt": "2026-06-25T18:30:49.127Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "steps",
+      "name": "Шаги",
+      "value": 4366,
+      "unit": "steps",
+      "xp": 0,
+      "baseXp": 0,
+      "note": ""
+    },
+    {
+      "id": "fe5f7d52-1fff-4524-8b6c-7167ed587bdb",
+      "createdAt": "2026-06-25T18:30:34.813Z",
+      "date": "2026-06-25",
+      "type": "daily",
+      "name": "10 минут мобильности",
+      "xp": 15,
+      "note": "Автозакрыто: 15 / 10 минуты"
+    },
+    {
+      "id": "e72b2ff1-ac5d-47ae-96e0-dbad13c8bda7",
+      "createdAt": "2026-06-25T18:30:34.812Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "mobility",
+      "name": "Мобильность / ТБС",
+      "value": 15,
+      "unit": "minutes",
+      "xp": 22.5,
+      "baseXp": 22.5,
+      "note": ""
+    },
+    {
+      "id": "2735a68a-36d2-4ed2-8c15-3250c7d73dc8",
+      "createdAt": "2026-06-25T18:30:25.099Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "pullups",
+      "name": "Подтягивания",
+      "value": 20,
+      "unit": "reps",
+      "xp": 40,
+      "baseXp": 40,
+      "note": ""
+    },
+    {
+      "id": "b49ed617-cb9c-452e-ba0f-ec6c8e095ac6",
+      "createdAt": "2026-06-25T18:30:25.099Z",
+      "date": "2026-06-25",
+      "type": "achievement",
+      "name": "Турниковый мастер",
+      "xp": 250,
+      "note": "Достижение открыто"
+    },
+    {
+      "id": "81d51cc1-72eb-45ec-93b1-d172e7bc3bf2",
+      "createdAt": "2026-06-25T18:30:15.913Z",
+      "date": "2026-06-25",
+      "type": "customDaily",
+      "name": "Проплыть 2 км",
+      "xp": 5,
+      "note": "Бонус 10%: 4.5 / 2 км"
+    },
+    {
+      "id": "e50e42b1-5893-44f5-8956-ec2d524a23f9",
+      "createdAt": "2026-06-25T18:30:15.912Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "swimming",
+      "name": "Плавание",
+      "value": 4.5,
+      "unit": "km",
+      "xp": 54,
+      "baseXp": 54,
+      "note": "море"
+    },
+    {
+      "id": "8a2d667f-7247-4da5-9cf2-812f23aa13c4",
+      "createdAt": "2026-06-25T12:20:36.456Z",
+      "date": "2026-06-25",
+      "type": "entry",
+      "entryId": "sleep",
+      "name": "Сон",
+      "value": 7,
+      "unit": "hours",
+      "xp": 21,
+      "baseXp": 21,
+      "note": ""
+    },
+    {
+      "id": "aa155c31-2402-43e3-83b0-2a9f36dbf657",
+      "createdAt": "2026-06-24T13:17:05.003Z",
+      "date": "2026-06-24",
+      "type": "activity",
+      "skillId": "pushups",
+      "name": "Отжимания",
+      "value": 50,
+      "unit": "reps",
+      "xp": 12.5,
+      "note": "",
+      "entryId": "pushups"
+    },
+    {
+      "id": "00c17d53-1012-4ea6-9a24-553556d10ff5",
+      "createdAt": "2026-06-24T11:12:18.536Z",
+      "date": "2026-06-24",
+      "type": "activity",
+      "skillId": "sleep",
+      "name": "Сон",
+      "value": 9,
+      "unit": "hours",
+      "xp": 37,
+      "note": "",
+      "entryId": "sleep"
+    },
+    {
+      "id": "3f8f5022-1917-4dd3-9f6d-195dd6f862a7",
+      "createdAt": "2026-06-24T10:47:57.659Z",
+      "date": "2026-06-23",
+      "type": "activity",
+      "skillId": "swimming",
+      "name": "Плавание",
+      "value": 3.7,
+      "unit": "km",
+      "xp": 44.400000000000006,
+      "note": "море",
+      "entryId": "swimming"
+    },
+    {
+      "id": "80497b63-c1e8-42fd-a128-337967aa6e14",
+      "createdAt": "2026-06-24T10:46:55.515Z",
+      "date": "2026-06-23",
+      "type": "activity",
+      "skillId": "activeCalories",
+      "name": "Активные ккал",
+      "value": 1200,
+      "unit": "kcal",
+      "xp": 48,
+      "note": "",
+      "entryId": "activeCalories"
+    },
+    {
+      "id": "f705d1f1-af9d-4f11-b9c1-ab0300633653",
+      "createdAt": "2026-06-24T10:46:02.332Z",
+      "date": "2026-06-24",
+      "type": "daily",
+      "name": "8 часов сна",
+      "xp": 20,
+      "note": "Ежедневный квест закрыт"
+    },
+    {
+      "id": "19453bc9-a9ef-40fd-a8c7-6cf0a775e5af",
+      "createdAt": "2026-06-23T17:53:44.350Z",
+      "date": "2026-06-23",
+      "type": "daily",
+      "name": "10 минут мобильности",
+      "xp": 15,
+      "note": "Ежедневный квест закрыт"
+    },
+    {
+      "id": "10a2f9e0-5cbc-4e03-be9b-55d53926012c",
+      "createdAt": "2026-06-23T17:53:40.841Z",
+      "date": "2026-06-23",
+      "type": "daily",
+      "name": "130 г белка",
+      "xp": 25,
+      "note": "Ежедневный квест закрыт"
+    },
+    {
+      "id": "22ff621b-4d14-4e93-984b-16bf05cdd384",
+      "createdAt": "2026-06-23T17:53:25.729Z",
+      "date": "2026-06-23",
+      "type": "daily",
+      "name": "500 активных ккал",
+      "xp": 25,
+      "note": "Ежедневный квест закрыт"
+    },
+    {
+      "id": "5e756828-094d-4e62-a9de-e111d9e65704",
+      "createdAt": "2026-06-23T17:53:15.327Z",
+      "date": "2026-06-23",
+      "type": "activity",
+      "skillId": "swimming",
+      "name": "Плавание",
+      "value": 3.7,
+      "unit": "km",
+      "xp": 44.400000000000006,
+      "note": "море",
+      "entryId": "swimming"
+    },
+    {
+      "id": "2bd0065a-b465-4f73-b274-411c8434e9d1",
+      "createdAt": "2026-06-23T13:42:29.766Z",
+      "date": "2026-06-23",
+      "type": "activity",
+      "skillId": "pushups",
+      "name": "Отжимания",
+      "value": 50,
+      "unit": "reps",
+      "xp": 12.5,
+      "note": "",
+      "entryId": "pushups"
+    },
+    {
+      "id": "f33e8935-b2a0-4767-ba02-17ce73786025",
+      "createdAt": "2026-06-23T13:33:25.775Z",
+      "date": "2026-06-23",
+      "type": "daily",
+      "name": "8 часов сна",
+      "xp": 20,
+      "note": "Ежедневный квест закрыт"
+    }
+  ],
+  "customQuests": [
+    {
+      "id": "custom_1782389996627",
+      "name": "100 отжиманий",
+      "metricId": "pushups",
+      "target": 100,
+      "bonusPercent": 10,
+      "active": true,
+      "createdAt": "2026-06-25T12:19:56.627Z"
+    },
+    {
+      "id": "custom_1782390016336",
+      "name": "Проплыть 2 км",
+      "metricId": "swimming",
+      "target": 2,
+      "bonusPercent": 10,
+      "active": true,
+      "createdAt": "2026-06-25T12:20:16.336Z"
+    }
+  ]
+}
